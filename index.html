@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
+    <a-scene mindar-image="imageTargetSrc: ./targets(1).mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
       <a-assets>
          
         
@@ -18,7 +18,7 @@
                 crossorigin webkit-playsinline autoplay="false" playsinline>
             </video> -->
         <img id="btninsta" src="./insta_btn.png" crossorigin="anonymous">
-        <img id="btnphone" src="./call.png" crossorigin="anonymous">
+<!--         <img id="btnphone" src="./call.png" crossorigin="anonymous"> -->
 
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable"></a-camera>
@@ -29,8 +29,8 @@
             </a-video>
         <a-entity id="playbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #play; opacity: 1; transparent: true;"></a-entity>  -->
         <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 -0.9 0" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
-    <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0" rotation="0 0 0" material="src: #btnphone; opacity: 1; transparent: true;"></a-entity>
-       
+<!--     <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0" rotation="0 0 0" material="src: #btnphone; opacity: 1; transparent: true;"></a-entity>
+        -->
       </a-entity>   
     </a-scene>
 
@@ -53,15 +53,15 @@
       //   examplePlane.remove();
       //  });
 
-      //   const insta_click = document.querySelector('#insta_click');
-      //   insta_click.addEventListener("click", event => {
-      //  window.location.href = "https://instagram.com/fmullasol";
-      //  });
+        const insta_click = document.querySelector('#insta_click');
+        insta_click.addEventListener("click", event => {
+       window.location.href = "https://instagram.com/fmullasol";
+       });
       
-       const call_click = document.querySelector('#call_click');
-        call_click.addEventListener("click", event => {
-       window.location.href = "elt:+9426983936";
-       })
+      //  const call_click = document.querySelector('#call_click');
+      //   call_click.addEventListener("click", event => {
+      //  window.location.href = "elt:+9426983936";
+      //  })
 
 
     </script>
